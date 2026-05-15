@@ -9,10 +9,16 @@ module Language.Ebnf.Extensions.Earley
   , mkRepsep1Rule
   ) where
 
-import Control.Applicative
+import Control.Applicative (asum)
 import qualified Data.List.NonEmpty as NE
 import Language.Ebnf.Extensions.Syntax
-import Text.Earley
+  ( Opt
+  , Rep0
+  , Rep1
+  , Repsep0(..)
+  , Repsep1(..)
+  )
+import Text.Earley (Grammar, Prod, rule)
 
 -- | Generate a rule to parse an 'Opt'.
 mkOptRule :: Prod r e t b -> Grammar r (Prod r e t (Opt b))

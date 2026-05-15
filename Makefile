@@ -11,8 +11,8 @@ docs :
 	stack haddock && open $$(stack path --local-doc-root)/index.html
 
 .PHONY : lint
-lint : 
-	hlint app src test 
+lint :
+	hlint src test
 
 .PHONY : tidy
 tidy :
