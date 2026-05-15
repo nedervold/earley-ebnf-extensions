@@ -1,7 +1,3 @@
-.PHONY : all
-all : build
-	stack exec -- earley-ebnf-extensions-exe
-
 .PHONY : build
 build :
 	stack build

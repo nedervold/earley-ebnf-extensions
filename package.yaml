@@ -38,17 +38,6 @@ ghc-options:
 library:
   source-dirs: src
 
-executables:
-  earley-ebnf-extensions-exe:
-    main:                Main.hs
-    source-dirs:         app
-    ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
-    dependencies:
-    - earley-ebnf-extensions
-
 tests:
   earley-ebnf-extensions-test:
     main:                Spec.hs
